@@ -12,6 +12,8 @@ class Player(pygame.sprite.Sprite):
         self.image.fill(SILVER)
         self.rect = self.image.get_rect()
 
-        self.rect.x = display_width + self.side_length
-        self.rect.y = random.randrange(0, display_height)
-        
+        self.display_width = display_width
+        self.display_height = display_height
+
+        self.rect.x = self.display_width + self.side_length
+        self.rect.y = random.randrange(0, self.display_height)
