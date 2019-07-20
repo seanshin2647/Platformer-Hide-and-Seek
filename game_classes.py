@@ -20,3 +20,6 @@ class Player(pygame.sprite.Sprite):
 
         self.vertical_momentum = 0
         self.horizontal_momentum = 0
+
+    def jump(self):
+        self.vertical_momentum += 30
