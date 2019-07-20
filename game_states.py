@@ -27,3 +27,8 @@ class Game_State(State):
         self.player_one = Player(display_width, display_height)
         self.all_sprites_list.add(self.player_one)
         self.all_players_list.add(self.player_one)
+
+# Core function.
+    def render(self, display):
+        self.all_sprites_list.draw(display)
+#
