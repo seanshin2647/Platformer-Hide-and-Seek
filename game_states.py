@@ -7,3 +7,6 @@ def kill_game():
 class State():
     def __init__(self):
         pass
+
+    def render(self):
+        raise NotImplementedError
