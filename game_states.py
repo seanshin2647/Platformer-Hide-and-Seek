@@ -10,3 +10,6 @@ class State():
 
     def render(self):
         raise NotImplementedError
+
+    def update(self):
+        raise NotImplementedError
