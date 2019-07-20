@@ -13,3 +13,6 @@ class State():
 
     def update(self):
         raise NotImplementedError
+
+    def handle_events(self):
+        raise NotImplementedError
