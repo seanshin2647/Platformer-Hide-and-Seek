@@ -32,3 +32,9 @@ class Game_State(State):
     def render(self, display):
         self.all_sprites_list.draw(display)
 #
+
+# Core function.
+    def update(self):
+        self.player_list.update()
+        self.all_sprites_list.update()
+#
