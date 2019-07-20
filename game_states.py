@@ -44,4 +44,7 @@ class Game_State(State):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 kill_game()
+
+            if pressed_buttons[pygame.K_w]:
+                self.player_one.jump()
 #
