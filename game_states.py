@@ -38,3 +38,10 @@ class Game_State(State):
         self.player_list.update()
         self.all_sprites_list.update()
 #
+
+# Core function.
+    def handle_events(self, pressed_buttons, display_width, display_height):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                kill_game()
+#
