@@ -15,7 +15,7 @@ def main_loop():
     
     while True:
         pressed_buttons = pygame.key.get_pressed()
-        game_state.handle_events.(pressed_buttons, DISPLAY_WIDTH, DISPLAY_HEIGHT)
+        game_state.handle_events(pressed_buttons, DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
         game_state.update()
 
