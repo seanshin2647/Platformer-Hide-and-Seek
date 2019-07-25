@@ -22,11 +22,9 @@ class Game_State(State):
         super().__init__()
 
         self.all_sprites_list = pygame.sprite.Group()
-        self.player_list = pygame.sprite.Group()
-
+        
         self.player_one = Player(display_width, display_height)
         self.all_sprites_list.add(self.player_one)
-        self.player_list.add(self.player_one)
 
 # Core function.
     def render(self, display):
@@ -35,7 +33,6 @@ class Game_State(State):
 
 # Core function.
     def update(self):
-        self.player_list.update()
         self.all_sprites_list.update()
 #
 
@@ -47,4 +44,5 @@ class Game_State(State):
 
             if pressed_buttons[pygame.K_w]:
                 self.player_one.jump()
+                print(self.player_list)
 #
