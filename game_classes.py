@@ -37,7 +37,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.x += self.horizontal_momentum
         self.rect.y += self.vertical_momentum
 
-        if self.rect.y != 0 or (self.rect.y + self.vertical_momentum) != 0:
-            self.vertical_momentum -= 5
+        if self.rect.y == self.display_height - self.side_length:
+            self.vertical_momentum = 0
         else:
-            pass
+            if self.vertical_momentum > -30:
+                self.vertical_momentum -= 5
