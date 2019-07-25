@@ -8,3 +8,20 @@ DISPLAY_HEIGHT = 600
 DISPLAY = pygame.display.set_mode([DISPLAY_WIDTH, DISPLAY_HEIGHT])
 
 clock = pygame.time.Clock()
+
+def main_loop():
+    # TODO: Add a dedicated state manager for this.
+    game_state = Game_State([DISPLAY_WIDTH, DISPLAY_HEIGHT])
+    
+    while True:
+        pressed_buttons = pygame.key.get_pressed()
+        game_state.handle_events.(pressed_buttons, DISPLAY_WIDTH, DISPLAY_HEIGHT)
+
+        game_state.update()
+
+        game_state.render(DISPLAY)
+
+        pygame.display.update()
+        clock.tick(FPS)
+
+main_loop()
