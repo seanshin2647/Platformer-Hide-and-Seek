@@ -28,7 +28,7 @@ class Player(pygame.sprite.Sprite):
         if self.vertical_momentum < 0:
             if ((self.rect.y - self.side_length) - self.vertical_momentum) < 0: 
                 self.reduce_momentum_value = abs((self.rect.y - self.side_length)
-                    - self.vertical_length)
+                    - self.vertical_momentum)
                 self.vertical_momentum += self.reduce_momentum_value
 
     def update(self):
