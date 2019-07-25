@@ -11,7 +11,7 @@ clock = pygame.time.Clock()
 
 def main_loop():
     # TODO: Add a dedicated state manager for this.
-    game_state = Game_State([DISPLAY_WIDTH, DISPLAY_HEIGHT])
+    game_state = Game_State(DISPLAY_WIDTH, DISPLAY_HEIGHT)
     
     while True:
         pressed_buttons = pygame.key.get_pressed()
