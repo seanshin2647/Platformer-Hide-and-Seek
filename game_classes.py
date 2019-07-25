@@ -15,8 +15,8 @@ class Player(pygame.sprite.Sprite):
         self.display_width = display_width
         self.display_height = display_height
 
-        self.rect.x = self.display_width + self.side_length
-        self.rect.y = random.randrange(0, self.display_height)
+        self.rect.x = random.randrange(0, self.display_height)
+        self.rect.y = self.display_height - self.side_length 
 
         self.vertical_momentum = 0
         self.horizontal_momentum = 0
