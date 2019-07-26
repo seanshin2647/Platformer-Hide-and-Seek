@@ -22,7 +22,7 @@ class Player(pygame.sprite.Sprite):
         self.horizontal_momentum = 0
 
     def jump(self):
-        self.vertical_momentum += 30
+        self.vertical_momentum += 25
 
     def ground_check(self):
         if self.vertical_momentum < 0:
@@ -40,5 +40,5 @@ class Player(pygame.sprite.Sprite):
         if self.rect.y == self.display_height - self.side_length:
             self.vertical_momentum = 0
         else:
-            if self.vertical_momentum > -30:
+            if self.vertical_momentum > -25:
                 self.vertical_momentum -= 5
