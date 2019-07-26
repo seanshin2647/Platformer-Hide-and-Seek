@@ -34,8 +34,8 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         self.ground_check()
 
-        self.rect.x += self.horizontal_momentum
-        self.rect.y += self.vertical_momentum
+        self.rect.x -= self.horizontal_momentum
+        self.rect.y -= self.vertical_momentum
 
         if self.rect.y == self.display_height - self.side_length:
             self.vertical_momentum = 0
