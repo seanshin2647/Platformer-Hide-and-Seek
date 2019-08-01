@@ -29,10 +29,10 @@ class Player(pygame.sprite.Sprite):
             self.jumps_left -= 1
 
     def left(self):
-        self.horizontal_momentum += 25
+        self.horizontal_momentum += 5
 
     def right(self):
-        self.horizontal_momentum -= 25
+        self.horizontal_momentum -= 5
 
     def ground_check(self):
         if self.vertical_momentum < 0:
