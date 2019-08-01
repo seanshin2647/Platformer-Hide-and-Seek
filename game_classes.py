@@ -34,6 +34,9 @@ class Player(pygame.sprite.Sprite):
     def right(self):
         self.horizontal_momentum -= 5
 
+    def slow_momentum_left(self):
+        self.horizontal_momentum -= 5
+
     def ground_check(self):
         if self.vertical_momentum < 0:
             if ((self.rect.y - self.side_length) - self.vertical_momentum) < 0: 
