@@ -50,5 +50,11 @@ class Game_State(State):
                     self.player_one.left()
                 elif event.key == pygame.K_d:
                     self.player_one.right()
+
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_a:
+                    self.player_one.slow_momentum_left()
+                elif event.key == pygame.K_d:
+                    self.player_one.slow_momentum_right()
                     
 #
