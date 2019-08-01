@@ -44,8 +44,11 @@ class Game_State(State):
 
             if pressed_buttons[pygame.K_w]:
                 self.player_one.jump()
-            elif pressed_buttons[pygame.K_a]:
-                self.player_one.left()
-            elif pressed_buttons[pygame.K_d]:
-                self.player_one.right()
+            
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    self.player_one.left()
+                elif event.key == pygame.K_d:
+                    self.player_one.right()
+                    
 #
