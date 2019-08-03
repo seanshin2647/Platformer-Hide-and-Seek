@@ -41,6 +41,11 @@ class Player(pygame.sprite.Sprite):
         self.horizontal_momentum -= 10
 
     def ground_check(self):
+        if self.vertical_momentum > 0:
+            if self.rect.y + self.side_length + self.vertical_momentum > self.display_height:
+                self.reduce_momentum_value = (self.rect.y + self.side_length +
+                    self.vertical_momentum) - self.display_height
+                self.vertical_momentum -= self.reduce_momentum_value 
 
     def update(self):
         self.ground_check()
