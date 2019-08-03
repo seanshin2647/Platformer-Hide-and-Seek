@@ -41,6 +41,15 @@ class Player(pygame.sprite.Sprite):
         self.horizontal_momentum -= 10
 
     def vertical_boundary_check(self):
+        if self.vertical_momentum < 0:
+            if self.rect.y + self.vertical_momentum < 0:
+                # self.saved_vertical_momentum is needed for calculations on the falling 
+                # after hitting the ceiling.
+                self.saved_vertical_momentum = self.vertical_momentum + 0
+                self.reduce_vertical_momentum = abs(0 - (self.rect.y +
+                    self.vertical_momentum))
+                self.vertical_momentum += self.reduce_vertical_momentum
+
         if self.vertical_momentum > 0:
             if self.rect.y + self.side_length + self.vertical_momentum > self.display_height:
                 self.reduce_vertical_momentum = (self.rect.y + self.side_length +
