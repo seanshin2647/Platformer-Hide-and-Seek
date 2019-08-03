@@ -25,32 +25,32 @@ class Player(pygame.sprite.Sprite):
 
     def jump(self):
         if self.jumps_left > 0:
-            self.vertical_momentum = 13
+            self.vertical_momentum = -13
             self.jumps_left -= 1
 
     def left(self):
-        self.horizontal_momentum += 10
+        self.horizontal_momentum -= 10
 
     def right(self):
-        self.horizontal_momentum -= 10
+        self.horizontal_momentum += 10
 
     def slow_momentum_left(self):
-        self.horizontal_momentum -= 10
+        self.horizontal_momentum += 10
 
     def slow_momentum_right(self):
-        self.horizontal_momentum += 10
+        self.horizontal_momentum -= 10
 
     def ground_check(self):
 
     def update(self):
         self.ground_check()
 
-        self.rect.x -= self.horizontal_momentum
-        self.rect.y -= self.vertical_momentum
+        self.rect.x += self.horizontal_momentum
+        self.rect.y += self.vertical_momentum
 
         if self.rect.y == self.display_height - self.side_length:
             self.vertical_momentum = 0
-        elif self.vertical_momentum > -13:
+        elif self.vertical_momentum < 13:
                 # TODO: Change this to make the jump look smoother.
                 self.vertical_momentum -= 1
 
