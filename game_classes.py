@@ -48,6 +48,11 @@ class Player(pygame.sprite.Sprite):
                 self.vertical_momentum -= self.reduce_momentum_value
 
     def horizontal_boundary_check(self):
+        if self.horizontal_momentum < 0:
+            if self.rect.x + self.horizontal_momentum < 0:
+                self.reduce_horizontal_momentum = abs(0 - (self.rect.x + 
+                    self.vertical_momentum))
+                self.horizontal_momentum += self.reduce_horizontal_momentum
 
     def update(self):
         self.vertical_boundary_check()
