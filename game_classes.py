@@ -77,7 +77,9 @@ class Player(pygame.sprite.Sprite):
         self.rect.x += self.horizontal_momentum
         self.rect.y += self.vertical_momentum
 
-        if self.rect.y == self.display_height - self.side_length:
+        if self.rect.y == 0:
+            self.vertical_momentum = (self.saved_vertical_momentum * -1)
+        elif self.rect.y == self.display_height - self.side_length:
             self.vertical_momentum = 0
         elif self.vertical_momentum < 13:
                 self.vertical_momentum += 1
