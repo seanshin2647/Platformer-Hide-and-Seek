@@ -72,6 +72,9 @@ class Player(pygame.sprite.Sprite):
                 # TODO: Change this to make the jump look smoother.
                 self.vertical_momentum += 1
 
+        if self.rect.x == 0 or (self.rect.x + self.side_length) == self.display_width:
+            self.horizontal_momentum = 0
+
         # TODO: Change this so that the player will new jumps when they land on a platform.
         # Possible set it so that whenever vertical_momentum is == to 0, it resets.
         if self.rect.y == self.display_height - self.side_length:
