@@ -14,6 +14,11 @@ def main_loop():
     game_state = Game_State(DISPLAY_WIDTH, DISPLAY_HEIGHT)
     
     while True:
+        # Temporary fix. The player's model for some reason does not update as 
+        # it should and smears across the screen. This fixes that, though in
+        # a messy way.
+        DISPLAY.fill(BLACK)
+
         pressed_buttons = pygame.key.get_pressed()
         game_state.handle_events(pressed_buttons, DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
