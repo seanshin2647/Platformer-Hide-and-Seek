@@ -61,6 +61,7 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.vertical_boundary_check()
+        self.horizontal_boundary_check()
 
         self.rect.x += self.horizontal_momentum
         self.rect.y += self.vertical_momentum
