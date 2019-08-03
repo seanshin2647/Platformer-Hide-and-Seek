@@ -79,7 +79,6 @@ class Player(pygame.sprite.Sprite):
         if self.rect.y == self.display_height - self.side_length:
             self.vertical_momentum = 0
         elif self.vertical_momentum < 13:
-                # TODO: Change this to make the jump look smoother.
                 self.vertical_momentum += 1
 
         if self.rect.x == 0 or (self.rect.x + self.side_length) == self.display_width:
