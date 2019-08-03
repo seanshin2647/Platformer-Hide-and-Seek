@@ -26,6 +26,7 @@ class Player(pygame.sprite.Sprite):
     def jump(self):
         if self.jumps_left > 0:
             self.vertical_momentum = -13
+            self.saved_vertical_momentum = self.vertical_momentum + 0
             self.jumps_left -= 1
 
     def left(self):
@@ -80,6 +81,7 @@ class Player(pygame.sprite.Sprite):
             self.vertical_momentum = 0
         elif self.vertical_momentum < 13:
                 self.vertical_momentum += 1
+                self.saved_vertical_momentum = self.vertical_momentum + 0
 
         if self.rect.x == 0 or (self.rect.x + self.side_length) == self.display_width:
             self.horizontal_momentum = 0
