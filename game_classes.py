@@ -31,9 +31,11 @@ class Player(pygame.sprite.Sprite):
 
     def left(self):
         self.horizontal_momentum -= 1
+        self.slow_movement_start = False
 
     def right(self):
         self.horizontal_momentum += 1
+        self.slow_momentum_start = False
 
     def activate_slow_momentum(self):
         self.slow_momentum_start = True
