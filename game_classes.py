@@ -90,6 +90,8 @@ class Player(pygame.sprite.Sprite):
 
         if self.rect.x == 0 or (self.rect.x + self.side_length) == self.display_width:
             self.horizontal_momentum = 0
+        elif self.slow_momentum_start == True and self.horizontal_momentum != 0:
+            self.slow_momentum()
 
         # TODO: Change this so that the player will new jumps when they land on a platform.
         # Possible set it so that whenever vertical_momentum is == to 0, it resets.
