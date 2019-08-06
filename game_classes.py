@@ -30,16 +30,16 @@ class Player(pygame.sprite.Sprite):
             self.jumps_left -= 1
 
     def left(self):
-        self.horizontal_momentum -= 10
+        self.horizontal_momentum -= 1
 
     def right(self):
-        self.horizontal_momentum += 10
+        self.horizontal_momentum += 1
 
     def slow_momentum_left(self):
-        self.horizontal_momentum += 10
+        self.horizontal_momentum += 1
 
     def slow_momentum_right(self):
-        self.horizontal_momentum -= 10
+        self.horizontal_momentum -= 1
 
     def vertical_boundary_check(self):
         if self.vertical_momentum < 0:
