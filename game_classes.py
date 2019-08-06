@@ -31,12 +31,12 @@ class Player(pygame.sprite.Sprite):
             self.jumps_left -= 1
 
     def left(self):
-        if self.horizontal_movement > -14:
+        if self.horizontal_momentum > -14:
             self.horizontal_momentum -= 1
             self.slow_movement_start = False
 
     def right(self):
-        if self.horizontal_movement < 14:
+        if self.horizontal_momentum < 14:
             self.horizontal_momentum += 1
             self.slow_momentum_start = False
 
