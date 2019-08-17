@@ -6,8 +6,9 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, display_width, display_height):
         super().__init__()
 
-        with open("configs.json") as self.player_configs:
-            self.configs = json.load(self.player_configs)
+        with open("configs.json") as self.configs:
+            self.configs = json.load(self.configs)
+            self.player_configs = self.configs["player"]
 
         self.side_length = 30
 
