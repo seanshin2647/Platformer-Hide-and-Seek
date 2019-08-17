@@ -25,7 +25,7 @@ class Player(pygame.sprite.Sprite):
         self.vertical_momentum = 0
         self.horizontal_momentum = 0
 
-        self.jumps_left = 2
+        self.jumps_left = self.player_configs["starting_jumps"]
         self.slow_momentum_start = False
 
     def jump(self):
