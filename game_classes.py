@@ -48,8 +48,8 @@ class Player(pygame.sprite.Sprite):
             self.slow_movement_start = False
 
     def right(self):
-        if self.horizontal_momentum < 15:
-            self.horizontal_momentum += 5
+        if self.horizontal_momentum < max_horizontal_right_speed:
+            self.horizontal_momentum += self.horiztaonl_right_speed
             self.slow_momentum_start = False
 
     def activate_slow_momentum(self):
