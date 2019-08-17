@@ -10,5 +10,9 @@
             "vertical_jump_speed": -13,
             "starting_jumps": 2,
             "slow_momentum_start": false
+        },
+    "platform":
+        {
+            "side_length": 30
         }
 }
