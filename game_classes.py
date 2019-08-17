@@ -38,7 +38,7 @@ class Player(pygame.sprite.Sprite):
 
     def jump(self):
         if self.jumps_left > 0:
-            self.vertical_momentum = -13
+            self.vertical_momentum += self.vertical_jump_speed
             self.saved_vertical_momentum = self.vertical_momentum + 0
             self.jumps_left -= 1
 
