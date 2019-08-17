@@ -38,18 +38,18 @@ class Player(pygame.sprite.Sprite):
 
     def jump(self):
         if self.jumps_left > 0:
-            self.vertical_momentum += self.vertical_jump_speed
+            self.vertical_momentum = self.vertical_jump_speed
             self.saved_vertical_momentum = self.vertical_momentum + 0
             self.jumps_left -= 1
 
     def left(self):
-        if self.horizontal_momentum > max_horizontal_left_speed:
+        if self.horizontal_momentum > self.max_horizontal_left_speed:
             self.horizontal_momentum += self.left_horizontal_change
             self.slow_movement_start = False
 
     def right(self):
-        if self.horizontal_momentum < max_horizontal_right_speed:
-            self.horizontal_momentum += self.horiztaonl_right_speed
+        if self.horizontal_momentum < self.max_horizontal_right_speed:
+            self.horizontal_momentum += self.right_horizontal_change
             self.slow_momentum_start = False
 
     def activate_slow_momentum(self):
