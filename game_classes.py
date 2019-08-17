@@ -118,3 +118,7 @@ class Player(pygame.sprite.Sprite):
         # Possible set it so that whenever vertical_momentum is == to 0, it resets.
         if self.rect.y == self.display_height - self.side_length:
             self.jumps_left = 2
+
+class Platform(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
