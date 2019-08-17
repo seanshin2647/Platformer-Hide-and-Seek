@@ -1,13 +1,8 @@
-# WARNING: DO NOT TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING
-
-import json
-
-player_values_string = '''
 {
     "player": [
         {
             "side_length": 30,
-            "color": "SILVER"
+            "color": "SILVER",
             "max_horizontal_right_speed": 15,
             "max_horizontal_left_speed": -15,
             "left_horizontal_momentum": -5,
@@ -18,4 +13,3 @@ player_values_string = '''
         }
     ]
 }
-'''
