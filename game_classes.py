@@ -31,6 +31,8 @@ class Player(pygame.sprite.Sprite):
         self.right_horizontal_change = self.player_configs["right_horizontal_momentum"]
         self.left_horizontal_change = self.player_configs["left_horizontal_momentum"]
 
+        self.vertical_jump_speed = self.player_configs["vertical_jump_speed"]
+
         self.jumps_left = self.player_configs["starting_jumps"]
         self.slow_momentum_start = self.player_configs["slow_momentum_start"]
 
