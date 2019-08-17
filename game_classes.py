@@ -130,3 +130,6 @@ class Platform(pygame.sprite.Sprite):
         self.image = pygame.Surface([self.side_length, self.side_length])
         self.image.fill(GREEN)
         self.rect = self.image.get_rect()
+
+        self.display_width = display_width
+        self.display_height = display_height
