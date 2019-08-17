@@ -1,14 +1,15 @@
 from libraries import *
 
+with open("configs.json") as configs:
+            loaded_configs = json.load(configs)
+
 # TODO: Make a player class and have two child classes for a hider and seeker.
 # Just a square block for now.
 class Player(pygame.sprite.Sprite):
     def __init__(self, display_width, display_height):
         super().__init__()
 
-        with open("configs.json") as self.configs:
-            self.configs = json.load(self.configs)
-            self.player_configs = self.configs["player"]
+        self.player_configs = loaded_configs["player"]
 
         self.side_length = self.player_configs["side_length"]
 
