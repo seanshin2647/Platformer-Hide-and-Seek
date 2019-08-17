@@ -122,3 +122,5 @@ class Player(pygame.sprite.Sprite):
 class Platform(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
+
+        self.platform_configs = loaded_configs["platform"]
