@@ -43,8 +43,8 @@ class Player(pygame.sprite.Sprite):
             self.jumps_left -= 1
 
     def left(self):
-        if self.horizontal_momentum > -15:
-            self.horizontal_momentum -= 5
+        if self.horizontal_momentum > max_horizontal_left_speed:
+            self.horizontal_momentum += self.left_horizontal_change
             self.slow_movement_start = False
 
     def right(self):
