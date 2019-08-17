@@ -133,3 +133,6 @@ class Platform(pygame.sprite.Sprite):
 
         self.display_width = display_width
         self.display_height = display_height
+
+        self.rect.x = x_location
+        self.rect.y = y_location
