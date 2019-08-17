@@ -120,7 +120,7 @@ class Player(pygame.sprite.Sprite):
             self.jumps_left = 2
 
 class Platform(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, display_width, display_height):
         super().__init__()
 
         self.platform_configs = loaded_configs["platform"]
