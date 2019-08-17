@@ -10,7 +10,7 @@ class Player(pygame.sprite.Sprite):
             self.configs = json.load(self.configs)
             self.player_configs = self.configs["player"]
 
-        self.side_length = 30
+        self.side_length = self.player_configs["side_length"]
 
         self.image = pygame.Surface([self.side_length, self.side_length])
         self.image.fill(SILVER)
