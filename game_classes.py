@@ -124,3 +124,5 @@ class Platform(pygame.sprite.Sprite):
         super().__init__()
 
         self.platform_configs = loaded_configs["platform"]
+
+        self.side_length = self.platform_configs["side_length"]
