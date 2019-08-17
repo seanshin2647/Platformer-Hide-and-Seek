@@ -1,5 +1,5 @@
 {
-    "player": [
+    "player":
         {
             "side_length": 30,
             "color": "SILVER",
@@ -11,5 +11,4 @@
             "starting_jumps": 2,
             "slow_momentum_start": false
         }
-    ]
 }
